@@ -17,7 +17,7 @@ import java.util.List;
 @Component
 public class AuthenticationManager implements ReactiveAuthenticationManager {
 
-    private final String SUPER_SECRET_KEY = "R3N4T42O2O";
+    private final String SUPER_SECRET_KEY = "SUPERKEY";
 
     @Override
     @SuppressWarnings("unchecked")

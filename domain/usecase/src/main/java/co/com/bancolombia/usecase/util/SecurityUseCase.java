@@ -66,6 +66,6 @@ public class SecurityUseCase {
         return Jwts.builder().setClaims(claims).setSubject(usuario.getId_usuario())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
-                .signWith(SignatureAlgorithm.HS512, "R3N4T42O2O".getBytes()).compact();
+                .signWith(SignatureAlgorithm.HS512, "SUPERKEY".getBytes()).compact();
     }
 }

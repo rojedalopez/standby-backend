@@ -9,8 +9,8 @@ spring:
     include: null
   datasource:
     url: "jdbc:postgresql://host/standby"
-    username: "user"
-    password: "password"
+    username: "usuario"
+    password: "contrasenia"
     driverClassName: "org.postgresql.Driver"
   jpa:
     databasePlatform: "org.hibernate.dialect.PostgreSQL9Dialect"
@@ -25,9 +25,9 @@ spring:
       max-file-size: 200MB
       max-request-size: 215MB
 amazonProperties:
-  endpointUrl:
-  accessKey:
-  secretKey:
-  bucketName:
+  endpointUrl: https://s3.amazonaws.com
+  accessKey: XXXXXXXX
+  secretKey: sR...
+  bucketName: s3Name
 tempConfiguration:
-  pathFile: ""
+  pathFile: "//url//Documents//uploads//"
