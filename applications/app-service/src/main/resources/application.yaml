@@ -1,0 +1,33 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "cleanArchitecture"
+  devtools:
+    add-properties: false
+  profiles:
+    include: null
+  datasource:
+    url: "jdbc:postgresql://host/standby"
+    username: "user"
+    password: "password"
+    driverClassName: "org.postgresql.Driver"
+  jpa:
+    databasePlatform: "org.hibernate.dialect.PostgreSQL9Dialect"
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+      max-request-size: 215MB
+amazonProperties:
+  endpointUrl:
+  accessKey:
+  secretKey:
+  bucketName:
+tempConfiguration:
+  pathFile: ""

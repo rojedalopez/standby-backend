@@ -1,0 +1,23 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+	implementation project(':reactive-web')
+	implementation project(':jpa-repository')
+    implementation project(':model')
+    implementation project(':usecase')
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.reactivecommons.utils:object-mapper:0.1.0'
+    compile 'org.springframework:spring-orm:4.3.6.RELEASE'
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '3.4.5'
+
+    runtime('org.springframework.boot:spring-boot-devtools')
+}
+
+bootJar {
+    launchScript()
+}
+
+task explodedJar(type: Copy) {
+    with jar
+    into "${buildDir}/exploded"
+}
